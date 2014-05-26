@@ -34,7 +34,7 @@
 		<g:message code="endUser.password.label" default="Password" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field type="password" name="password" pattern="${endUserInstance.constraints.password.matches}" required="" value="${endUserInstance?.password}"/>
+	<g:field type="password" name="password" required="" value="${endUserInstance?.password}"/>
 
 </div>
 
