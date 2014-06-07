@@ -14,9 +14,14 @@ class EndUser
 
 	// Constraints
     static constraints = {
-		firstName(blank:false)  
-		lastName(blank:false)
-		userName(blank:false, unique:true )        // must be unique and non-blank
-		password(password:true,szie:3..10)   // masked password, 3-10 alphabetical characters	 
-    }	
+		firstName:blank:false                                   // first name cannot be blank
+		lastName blank:false                                    // last name cannot be blank
+		userName blank:false, unique:true                      //  user name must be unique and non-blank
+		password(password:true,szie:3..10, validator:{val,obj->            
+			                                              if (val?.equalsIgnoreCase(obj.firstName))
+		                                                       { return false} 
+		                                              } 
+	                                                 )      // masked password, 3-10 alphabetical characters & password can't be first name 
+		}  
+    	
 }
