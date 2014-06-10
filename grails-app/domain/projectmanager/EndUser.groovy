@@ -14,7 +14,7 @@ class EndUser
 
 	// Constraints
     static constraints = {
-		firstName:blank:false                                   // first name cannot be blank
+		firstName blank:false                                   // first name cannot be blank
 		lastName blank:false                                    // last name cannot be blank
 		userName blank:false, unique:true                      //  user name must be unique and non-blank
 		password(password:true,szie:3..10, validator:{val,obj->            
