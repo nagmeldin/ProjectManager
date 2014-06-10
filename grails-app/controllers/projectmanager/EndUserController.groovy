@@ -10,9 +10,19 @@ class EndUserController {
 
 	static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-	def index(Integer max) {
+ 
+	   def index(Integer max) {
+		
 		params.max = Math.min(max ?: 10, 100)
+	
 		respond EndUser.list(params), model:[endUserInstanceCount: EndUser.count()]
+	   
+		/*
+		render view: "mylogin", model: [EndUser: EndUser.get(params.id) ]
+		*/
+	
+		
+		log.info('index() has been accessed')
 	}
 	
 	//-------------- User Authentication-----------------------------
@@ -39,9 +49,15 @@ class EndUserController {
 	*/
 		
 
+
 	def show(EndUser endUserInstance) {
 		respond endUserInstance
 	}
+	
+	   def mylogin( ) 
+	     {	 
+		   render view: "mylogin", model: [EndUser: EndUser.get(params.id) ]   
+	     }
 
 	def create() {
 		respond new EndUser(params)
