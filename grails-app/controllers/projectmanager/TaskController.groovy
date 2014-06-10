@@ -14,7 +14,14 @@ class TaskController {
         params.max = Math.min(max ?: 10, 100)
         respond Task.list(params), model:[taskInstanceCount: Task.count()]
     }
-
+	def mytask( )
+	{
+	  render view: "mytask", model: [Task: Task.get(params.id) ]
+	}
+	
+	
+	
+	
     def show(Task taskInstance) {
         respond taskInstance
     }

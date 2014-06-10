@@ -15,6 +15,13 @@ class ProjectController {
         params.max = Math.min(max ?: 10, 100)
         respond Project.list(params), model:[projectInstanceCount: Project.count()]
     }
+	
+ 
+	
+	def myproj( )
+	{
+	  render view: "myproj", model: [Project: Project.get(params.id) ]
+	}
 
     def show(Project projectInstance) {
         respond projectInstance
