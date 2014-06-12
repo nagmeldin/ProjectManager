@@ -17,47 +17,23 @@ class EndUserController {
 	
 		respond EndUser.list(params), model:[endUserInstanceCount: EndUser.count()]
 	   
-		/*
-		render view: "mylogin", model: [EndUser: EndUser.get(params.id) ]
-		*/
-	
-		
-		log.info('index() has been accessed')
+		log.info('index() has been accessed')  // LOGGING
 	}
 	
-	//-------------- User Authentication-----------------------------
-	/*
-	def login = {}
-				//////////
-	  def authenticate = {
-	  def user = EndUser.findByUserNameAndPassword(params.userName, params.password) // sql query
-	  if(user){
-				session.user = user     // user session creation
-				flash.message = "Hello ${user.firstName}!"
-			   redirect(action:"login")	
-		   }else{
-			flash.message = "Sorry, ${params.firstName}. Please try again."
-			  redirect(action:"login")
-				}
-		 }
-				//////////
-	   def logout = {
-			 flash.message = "Goodbye ${session.user.firstName}"
-			  session.user = null
-			   redirect(action:"login")
-			   }
-	*/
-		
+	   
+	   
+	   def mylogin( )
+	   {
+		 render view: "mylogin", model: [EndUser: EndUser.get(params.id) ]
+	   }
+	   
+	   	
 
 
 	def show(EndUser endUserInstance) {
 		respond endUserInstance
 	}
 	
-	   def mylogin( ) 
-	     {	 
-		   render view: "mylogin", model: [EndUser: EndUser.get(params.id) ]   
-	     }
 
 	def create() {
 		respond new EndUser(params)

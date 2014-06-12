@@ -22,6 +22,8 @@ class ProjectController {
 	{
 	  render view: "myproj", model: [Project: Project.get(params.id) ]
 	}
+	
+	
 
     def show(Project projectInstance) {
         respond projectInstance
