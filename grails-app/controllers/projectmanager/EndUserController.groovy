@@ -27,7 +27,15 @@ class EndUserController {
 		 render view: "mylogin", model: [EndUser: EndUser.get(params.id) ]
 	   }
 	   
+	   def mysave()
+	   {
+		def myuser = new EndUser( params)
+		    myuser.mysave()
+	   }
 	   	
+	   
+	   
+	   
 
 
 	def show(EndUser endUserInstance) {

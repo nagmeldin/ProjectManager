@@ -44,16 +44,8 @@
 	</label>
 	<g:field type="password" name="password" pattern="${endUserInstance.constraints.password.matches}" required="" value="${endUserInstance?.password}"/>
 
-</div>	
-			
-			
-			
-			
-			
-			
-			
-			
-			
+     </div>	
+					
 			<g:form url="[resource:endUserInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
@@ -63,5 +55,7 @@
 				</fieldset>
 			</g:form>
 		</div>
+		
+		
 	</body>
 </html>

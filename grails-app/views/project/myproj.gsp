@@ -8,8 +8,8 @@
 	 
 	   </div>	
 			
-		      <b> My Project List
-
+		      <b> My Project List: 
+                    ${Project}
 		</div>
 	   
 	   

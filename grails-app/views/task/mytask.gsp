@@ -8,7 +8,7 @@
 	 
 	   </div>	
 			
-		      <b> My Task List
+		      <b> My Task List: ${Task}
 
 		</div>
 	   
