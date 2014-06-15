@@ -10,7 +10,8 @@ class ProjectController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-
+	// static defaultAction = 'show' , it's set as default
+	
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
         respond Project.list(params), model:[projectInstanceCount: Project.count()]
@@ -19,7 +20,11 @@ class ProjectController {
 	
 	def myproj( )
 	{
-	   render view: "myproj", model: [Project: Project.get(params.id) ]
+		def projFlag1= "Activate Project Controller"
+		def projFlag2= "Deactivate Project Controller"
+		 [key1:ProjFlag1, key2:ProjFlag2]
+	  render view: "myproj", model: [Project: Project.get(params.id) ] when binding use my own customized view
+	
 	 
 	}
 	
