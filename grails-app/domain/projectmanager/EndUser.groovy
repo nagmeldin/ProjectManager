@@ -8,6 +8,7 @@ class EndUser
 	String lastName
 	String userName
 	String password
+	//String useremail
 	
 	// Entity Relationships:
 	static hasMany = [projects:Project, tasks:Task]
@@ -17,6 +18,7 @@ class EndUser
 		firstName blank:false                                   // first name cannot be blank
 		lastName blank:false                                    // last name cannot be blank
 		userName blank:false, unique:true                      //  user name must be unique and non-blank
+		//useremail email:true
 		password(password:true,szie:3..10, validator:{val,obj->            
 			                                              if (val?.equalsIgnoreCase(obj.firstName))
 		                                                       { return false} 
