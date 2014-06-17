@@ -6,7 +6,12 @@ class ProjController {
 
 	def index()
 	{
-		render 'Message from Proj Controller '
+		// render 'Message from Proj Controller '
+	}
+	
+	def main()
+	{
+		// render 'Message from Proj Controller '
 	}
 	
 	def edit( )
