@@ -9,6 +9,11 @@ class EndUser
 	String userName
 	String password
 	//String useremail
+	// String maritalStatus
+	// Integer age
+	// Float salary
+	// Integer phone
+	// Integer ccard
 	
 	// Entity Relationships:
 	static hasMany = [projects:Project, tasks:Task]
@@ -19,7 +24,12 @@ class EndUser
 		lastName blank:false                                    // last name cannot be blank
 		userName blank:false, unique:true                      //  user name must be unique and non-blank
 		//useremail email:true
-		password(password:true,szie:3..10, validator:{val,obj->            
+		// maritalStatus nullable:true  // can be kept null in database
+		//age maxsize:100
+		// salary 
+		 // phone
+		 // ccard credicard:true
+		password(password:true,szie:3..15, validator:{val,obj->            
 			                                              if (val?.equalsIgnoreCase(obj.firstName))
 		                                                       { return false} 
 		                                              } 
