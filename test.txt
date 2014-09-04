@@ -1,2 +1,8 @@
+<<<<<<< HEAD
 Just a test.........
 July 2014/August 2014
+=======
+Just a test....
+July 2014
+Thanks
+>>>>>>> dd0b378f215751ff644229bc464dbbf34f21cdc8
