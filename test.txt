@@ -10,4 +10,7 @@ Just a test....
 July 2014
 Thanks
 >>>>>>> dd0b378f215751ff644229bc464dbbf34f21cdc8
+<<<<<<< HEAD
+>>>>>>> parent of d87c970... merge conflict resolved
+=======
 >>>>>>> parent of d87c970... merge conflict resolved
