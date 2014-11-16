@@ -140,7 +140,7 @@ class EndUserControllerSpec extends Specification {
 
         when:"The domain instance is passed to the delete action"
             controller.delete(endUser)
-
+    //  Unit block testing
         then:"The instance is deleted"
             EndUser.count() == 0
             response.redirectedUrl == '/endUser/index'
