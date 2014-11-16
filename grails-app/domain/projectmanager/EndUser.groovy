@@ -3,12 +3,14 @@ package projectmanager
 class EndUser 
 {
 	//Model Attributes
+	
 	String firstName
 	String toString ()  { "${firstName}"  }  // cleans display of model name in stead of its id
 	String lastName
 	String userName
 	String password
 	//String useremail
+	// String emailAddress
 	// String maritalStatus
 	// Integer age
 	// Float salary
