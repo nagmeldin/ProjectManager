@@ -37,6 +37,7 @@ environments {
                initialSize = 5
                maxActive = 50
                minIdle = 5
+               minIdle = 5
                maxIdle = 25
                maxWait = 10000
                maxAge = 10 * 60000
