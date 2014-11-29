@@ -153,6 +153,7 @@ set STARTER_MAIN_CLASS=org.grails.wrapper.GrailsWrapper
 set STARTER_CONF=%GRAILS_HOME%\conf\groovy-starter.conf
 
 set JAVA_EXE=%JAVA_HOME%\bin\java.exe
+
 set TOOLS_JAR=%JAVA_HOME%\lib\tools.jar
 
 set JAVA_OPTS=%GRAILS_OPTS% %JAVA_OPTS% %AGENT%
