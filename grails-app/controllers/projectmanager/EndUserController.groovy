@@ -12,6 +12,7 @@ import grails.transaction.Transactional
 
 class EndUserController {
 
+	// Finalized version
 	static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
  
