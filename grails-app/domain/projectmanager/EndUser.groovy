@@ -18,8 +18,7 @@ class EndUser
 	
 	// Entity Relationships:
 	static hasMany = [projects:Project, tasks:Task]
-
-	// Constraints
+	
     static constraints = {
 		firstName blank:false                                   // first name cannot be blank
 		lastName blank:false                                    // last name cannot be blank

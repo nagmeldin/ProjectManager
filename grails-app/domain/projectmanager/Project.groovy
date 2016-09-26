@@ -3,7 +3,7 @@ package projectmanager
 class Project 
 {
 	
-	// Model Attributes:
+// Model Attributes:
 	String name
 	String toString ()  { "${name}"  }  // cleans display of model name in stead of its id
 	String description
@@ -13,8 +13,7 @@ class Project
    // Entity Relationships:
 	 static belongsTo = [owner:EndUser]
 	 static hasMany = [tasks:Task]
-	 
-	 // Constraints
+	
 	 static constraints = {
 		 
 		 name blank:false,unique:true  // or alternatively:
