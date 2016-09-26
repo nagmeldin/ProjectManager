@@ -26,7 +26,6 @@ class EndUser
 		//useremail email:true
 		// maritalStatus nullable:true  // can be kept null in database
 		//age maxsize:100
-		// salary 
 		 // phone
 		password(password:true,szie:3..15, validator:{val,obj->            
 			                                              if (val?.equalsIgnoreCase(obj.firstName))
