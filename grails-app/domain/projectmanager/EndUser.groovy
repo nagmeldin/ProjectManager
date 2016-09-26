@@ -14,8 +14,7 @@ class EndUser
 	// String maritalStatus
 	// Integer age
 	// Float salary
-	// Integer phone
-	// Integer ccard
+	// Long phone
 	
 	// Entity Relationships:
 	static hasMany = [projects:Project, tasks:Task]
