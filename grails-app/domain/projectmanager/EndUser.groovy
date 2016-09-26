@@ -28,7 +28,6 @@ class EndUser
 		//age maxsize:100
 		// salary 
 		 // phone
-		 // ccard credicard:true
 		password(password:true,szie:3..15, validator:{val,obj->            
 			                                              if (val?.equalsIgnoreCase(obj.firstName))
 		                                                       { return false} 
