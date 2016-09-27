@@ -9,6 +9,7 @@ class Project
 	String description
 	Date dueDate
 	String billType
+	 
   
    // Entity Relationships:
 	 static belongsTo = [owner:EndUser]
@@ -18,7 +19,7 @@ class Project
 		 
 		 name blank:false,unique:true  // or alternatively:
 		 //name(blank:false,unique:true)
-		 description()
+		 description blank:true
 		 dueDate(min: new Date())  // has to be future date
 		 billType(inList:["hourly", "daily", "monthly"] )
 	 }
