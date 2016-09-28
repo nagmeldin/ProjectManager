@@ -38,10 +38,6 @@ class EndUserController {
 		    myuser.mysave()
 	   }
 	   	
-	   
-	   
-	   
-
 
 	def show(EndUser endUserInstance) {
 		respond endUserInstance
